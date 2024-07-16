@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(103, 125, 106);
+}
+
+header {
+    background-color: rgb(26, 54, 54);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid rgb(214, 189, 152);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.add-task {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid rgb(214, 189, 152);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(64, 83, 76);
+}
+
+.add-task input[type="text"] {
+    width: 20vw;
+    padding: 10px;
+    margin: 4px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-task button[type="button"] {
+    background-color: #4c9eaf;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task button:hover {
+    background-color: rgb(214, 189, 152);
+}
+
+.task-list {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.task-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.task-list li.completed {
+    background-color: #dff0df;
+    text-decoration: line-through;
+}
+
+.task-list input[type="checkbox"] {
+    margin: 0 10px;
+}
+
+.task-list button {
+    background-color: rgb(223, 211, 195);
+    color: #01000e;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-list button:hover {
+    background-color: #3c5b90;
+}
+
+/* Animations */
+.task-list li {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delete-button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
